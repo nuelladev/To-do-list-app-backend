@@ -41,6 +41,10 @@ public class TodoController {
                     return ResponseEntity.ok().body(updatedTodo);
                 }).orElse(ResponseEntity.notFound().build());
     }
+@GetMapping("/completed/{completed}")
+public List<TodoModel>getTodoByCompleted(@PathVariable boolean completed){
+        return todoModelService.findByCompleted(completed);
+}
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteTodo(@PathVariable Long id){
         return todoModelService.findById(id)

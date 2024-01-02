@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan(basePackages = {"com.example.demo.model"}) // only needed if entities are not in a sub-package of the main application class
+@EntityScan(basePackages = {"com.example.demo.model"})
 @EnableJpaRepositories(basePackages = {"com.example.demo.repository"}) // only needed if repositories are not in a sub-package of the main application class
 public class TodoAppBackendApplication {
 

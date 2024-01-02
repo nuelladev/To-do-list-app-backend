@@ -4,7 +4,10 @@ import com.example.demo.model.TodoModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface TodoModelRepository extends JpaRepository<TodoModel, Long> {
 
+    List<TodoModel> findByCompleted(boolean completed);
 }

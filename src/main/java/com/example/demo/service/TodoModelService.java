@@ -20,6 +20,9 @@ public class TodoModelService {
     public Optional<TodoModel> findById(Long id){
         return todoModelRepository.findById(id);
     }
+    public List<TodoModel>findByCompleted(boolean completed){
+        return todoModelRepository.findByCompleted(completed);
+    }
     public TodoModel saveItem(TodoModel todoModel){
         return todoModelRepository.save(todoModel);
     }
